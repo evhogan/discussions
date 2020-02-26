@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Discussion</title>
+
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=vUVypFONPQzX07psABmUwenbj-uzQUeYFvo51JewQmm2de1IPm0FLBms4ByKJlJsZLSL_r2Pf9lHy498Ysrctb4inz3DbN-rsYB0bpz9_yEt0D6U5Dm3ge83U8gzx3KBfb7-rsAqQlPMrdDeT6aSf2Sf00vm5NQ7w7_m5YwQk-4go_payrrnGce-DtUgeY7lO2TqkKrK_uSVvUojXo1s9mp7tgiCv1ZtlKjp8XnZw8mlVDxKEuRjkcKM-K4HfChJeHVcP9SHR886HnYCNaluiIgWAXa9SOUBQwOua86Hh59XMVpsH1yb2OzoGtLMN6JHavURr-BUybLBVn2scNQfrdbJoJRvurT-rUwqKy5MMNRYPMVUQyyMOqY4elBTc_0PxvxxPcWgb6tsUSiaJW1Dd7ApQApfT630c5UXhF5BoppNj7wpF5drHCQBrvfCF6C2oLd7StrrD5lnm-iz-gqjbSFt404jXE1_ma8YcpG7h1Z1UgiOt0WscfiKGU-jiTCNnRQwXbZ3mzCBDTJPi1PKUrzCNNuU9NfaUJ_3oXtXHlnukAmU_76gdrSwuBNHY5x3UmG76J1a3-KwrcgyhNRT8awGo9Goox4sKK4qq_uGpQ196kG40QYvTgsRYtgmoxPeImSZfIzVigxXXIPkXjDAxO2pGuokKY34dQkCveJIkI-IAsp0CjJMg3ohOX31p8yMPofpg5s_wK8pDW_IwzI8JUcF-cvYbzqU0weQE78VYiviCPDc07gGRQYnS4vopSalbEjaUlKJng_6Iz6axRb4YSPWUzyH_mi-TAfMpf8PIHqOrJjjU_C_mHC9ofcgQT85UlTDGFNFxWuzQ_g9rExJankxe05sEyqY0pKOYpQ9FRa7PPxrnmF8uvu2nXy1kIL7vdH67FrMJXIk2fWL28e-1tP39IAqCwAYQ5tmVzJ_LXhrSI3jqv87uUR1UQEYbaSwIr5RAkwFtwZ-_-yPyrPDzYUBgsunijpWtLAfx6-qxhfG5bJBpG_ZhDHVpRjXAJ2Ueh5x-K2bfcgwGHCox2JcRCOkjdb29pJxRankLMioOJS6wz5xUXJKzmpNOM4mUk6JJqfqi7U24b4ZV2Eaf7QMtg" charset="UTF-8"></script><script type="text/javascript">
+	function displayInformation () {
+		// Your code goes here. 
+		// Do not change any other code in this file
+		// All of the steps below must be achieved using JavaScript!
+
+		/*
+		1. Change the h1 element to your name.
+		2. Update the three span elements using ONLY JavaScript
+		3. Change the background color and margin for the entire page.
+		4. If someone uses the keyboard shortcut to copy the words "University of Michigan" then add the words "Go Blue" to the final div.  Each occurence should be on a separate line.  Don't use paragraphs. 
+		*/
+		document.querySelector("h1").innerText = "Evan Hogan";
+		URL = document.getElementById("URL");
+		URL.innerHTML = window.location.href;
+		var lis = document.querySelector("body").getElementsByTagName("li");
+		items = document.getElementById("items");
+		items.innerHTML = lis.length;
+		time = document.getElementById("time");
+		var date = new Date();
+		time.innerHTML = date;
+	}
+</script>
+<style>
+p{
+	background-color: #b3b3b3;
+	border: 3px solid #FFFFFF;
+	padding: 3%;
+	font-size: 1.1em;
+	line-height: 1.5;
+}
+</style>
+</head>
+<body onload = "displayInformation();">
+	<h1>Your name goes here</h1>
+
+	<ol>
+		<li>Apples</li>
+		<li>Bananas</li>
+		<li>Celery</li>
+		<li>Doughnuts</li>
+	</ol>
+	<h2>Use JavaScript to display the following information here:</h2>
+	<p>
+		The URL of this page is: <span id = "URL"></span><br/>
+		The number of list items for this page: <span id = "items"></span><br/>
+		The current date/time is: <span id = "time"></span><br/>
+	</p>
+	<ul>
+		<li>Kent State</li>
+		<li>University of Pittsburgh</li>
+		<li>University of Ulster</li>
+		<li>California State University Long Beach</li>
+		<li oncopy="copyFunction()">University of Michigan</li>
+	</ul>
+	<div id="cheer">
+
+	</div>
+
+</body>
+</html>
